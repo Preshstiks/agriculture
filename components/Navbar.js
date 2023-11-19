@@ -13,7 +13,7 @@ const Navbar = () => {
     setShowDropdownRHI(value);
   };
   return (
-    <div className="bg-white text-dark shadow-sm px-[8%]">
+    <div className="bg-white bg-opacity-75 z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Image src="/leaf.png" width={50} height={50} />
@@ -30,23 +30,8 @@ const Navbar = () => {
               onMouseEnter={() => handleDropdownRH(true)}
               onMouseLeave={() => handleDropdownRH(false)}
             >
-              RH Initiative
-              <IoMdArrowDropdown className="text-black text-[24px]" />
+              Home
             </div>
-            {showDropdownRH && (
-              <div
-                className="absolute top-[80px] w-[180px] px-2 shadow-md py-3"
-                onMouseEnter={() => handleDropdownRH(true)}
-                onMouseLeave={() => handleDropdownRH(false)}
-              >
-                <div className="py-3 hover:text-orange px-6">
-                  <Link href="#">About Us</Link>
-                </div>
-                <div className="py-3 hover:text-orange px-6 border-t border-gray">
-                  <Link href="#">Partners</Link>
-                </div>
-              </div>
-            )}
           </div>
           <div className="relative">
             <div
@@ -54,12 +39,12 @@ const Navbar = () => {
               onMouseEnter={() => handleDropdownRHI(true)}
               onMouseLeave={() => handleDropdownRHI(false)}
             >
-              RHI Programs
-              <IoMdArrowDropdown className="text-black text-[24px]" />
+              Services
+              <IoMdArrowDropdown className="text-dark text-[20px]" />
             </div>
             {showDropdownRHI && (
               <div
-                className="absolute top-[80px] w-[180px] px-2 shadow-md py-3"
+                className="absolute top-[80px] bg-white w-[180px] px-2 shadow-md py-3"
                 onMouseEnter={() => handleDropdownRHI(true)}
                 onMouseLeave={() => handleDropdownRHI(false)}
               >
@@ -84,13 +69,13 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className="hover:text-orange py-7 px-2 hover:cursor-pointer">
+          <div className="hover:text-orange py-7 hover:cursor-pointer">
             Gallery
           </div>
-          <div className="hover:text-orange py-7 px-2 hover:cursor-pointer">
-            RH News
+          <div className="hover:text-orange py-7 hover:cursor-pointer">
+            Testimonials
           </div>
-          <div className="hover:text-orange py-7 px-2 hover:cursor-pointer">
+          <div className="hover:text-orange py-7 hover:cursor-pointer">
             Contact
           </div>
         </div>
