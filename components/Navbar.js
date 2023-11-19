@@ -13,7 +13,7 @@ const Navbar = () => {
     setShowDropdownRHI(value);
   };
   return (
-    <div className="bg-white bg-opacity-75 z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
+    <div className="bg-white bg-opacity-90 z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
       <div className="flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Image src="/leaf.png" width={50} height={50} />
