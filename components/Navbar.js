@@ -55,15 +55,6 @@ const Navbar = () => {
                   <Link href="#">Agrotourism</Link>
                 </div>
                 <div className="py-3 hover:text-orange px-6 border-t border-gray">
-                  <Link href="#">Art</Link>
-                </div>
-                <div className="py-3 hover:text-orange px-6 border-t border-gray">
-                  <Link href="#">Culture</Link>
-                </div>
-                <div className="py-3 hover:text-orange px-6 border-t border-gray">
-                  <Link href="#">Hospitality</Link>
-                </div>
-                <div className="py-3 hover:text-orange px-6 border-t border-gray">
                   <Link href="#">Trade Industry</Link>
                 </div>
               </div>
