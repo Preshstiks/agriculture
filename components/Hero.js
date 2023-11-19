@@ -20,7 +20,7 @@ const Hero = () => {
           Join us on a journey where innovation meets tradition, nurturing the
           fields of possibility.
         </p>
-        <button className="py-3 px-4 mt-[60px] bg-green text-white font-montserrat font-medium hover:bg-opacity-0 border-2 border-green">
+        <button className="py-3 px-4 mt-[60px] bg-green text-white font-montserrat font-medium hover:bg-opacity-0 border-2 rounded-lg border-green">
           DISCOVER MORE
         </button>
       </div>
