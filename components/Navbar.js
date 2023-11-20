@@ -15,22 +15,22 @@ const Navbar = () => {
   return (
     <div className="bg-white bg-opacity-90 z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image src="/leaf.png" width={50} height={50} />
-          <div className="font-bold leading-4 text-green tracking-widest text-lg font-playfair">
+          <div className="font-bold leading-4 text-lime tracking-widest text-lg font-playfair">
             <h1>RENEWED</h1>
             <h1>HOPE</h1>
             <h1>INITIATIVE</h1>
           </div>
-        </div>
+        </Link>
         <div className="flex gap-5 relative font-sans font-bold">
           <div className="relative">
             <div
-              className="hover:text-orange py-7 hover:cursor-pointer flex items-center"
+              className="hover:text-orange py-7 hover:cursor-pointer select-none flex items-center"
               onMouseEnter={() => handleDropdownRH(true)}
               onMouseLeave={() => handleDropdownRH(false)}
             >
-              Home
+              <Link href="/">Home</Link>
             </div>
           </div>
           <div className="relative">

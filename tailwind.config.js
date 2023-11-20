@@ -19,7 +19,8 @@ module.exports = {
       },
     },
     colors: {
-      green: "#A5D837",
+      lime: "#A5D837",
+      green: "#0C6327",
       orange: "#FFA900",
       // gray: "#F5F5F5",
       gray: "#DEDEDE",
