@@ -5,12 +5,17 @@ const Testimonials = () => {
   return (
     <div className="py-[100px] px-[8%] text-dark">
       <div>
-        <h1 className="text-[50px] text-center py-3">Testimonials</h1>
+        <h1 className="text-[50px] text-center py-10 font-montserrat font-medium">
+          Testimonials
+        </h1>
       </div>
 
-      <div className="flex gap-3 flex-wrap">
+      <div className="flex gap-3 flex-wrap font-lato">
         {TestimonialsData.map((items) => (
-          <div className="bg-[#e9e9e9] p-[30px] w-full rounded-md">
+          <div
+            key={items.id}
+            className="bg-[#e9e9e9] p-[30px] w-full rounded-md"
+          >
             <div className="flex gap-2 mb-3">
               {[...Array(items.ratingValue)].map((_, index) => (
                 <FaStar

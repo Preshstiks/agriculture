@@ -13,17 +13,17 @@ const Navbar = () => {
     setShowDropdownRHI(value);
   };
   return (
-    <div className="bg-white bg-opacity-90 z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
+    <div className="bg-white bg-opacity-90 z-50 w-full uppercase fixed top-0 text-dark shadow-sm px-[8%]">
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/leaf.png" width={50} height={50} />
-          <div className="font-bold leading-4 text-lime tracking-widest text-lg font-playfair">
+          <div className="font-black leading-4 text-lime tracking-[5px] text-md font-montserrat">
             <h1>RENEWED</h1>
             <h1>HOPE</h1>
             <h1>INITIATIVE</h1>
           </div>
         </Link>
-        <div className="flex gap-5 relative font-sans font-bold">
+        <div className="flex gap-5 relative font-lato text-sm font-bold">
           <div className="relative">
             <div
               className="hover:text-orange py-7 hover:cursor-pointer select-none flex items-center"
@@ -61,13 +61,13 @@ const Navbar = () => {
             )}
           </div>
           <div className="hover:text-orange py-7 hover:cursor-pointer">
-            Gallery
+            <Link href="#">Gallery</Link>
           </div>
           <div className="hover:text-orange py-7 hover:cursor-pointer">
-            Testimonials
+            <Link href="#">Testimonials</Link>
           </div>
           <div className="hover:text-orange py-7 hover:cursor-pointer">
-            Contact
+            <Link href="/contact">Contact Us</Link>
           </div>
         </div>
       </div>

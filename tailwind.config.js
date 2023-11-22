@@ -12,11 +12,11 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      fontFamily: {
-        lato: ["Lato", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
-        playfair: ["Playfair Display", "serif"],
-      },
+    },
+    fontFamily: {
+      lato: ["Lato", "sans-serif"],
+      montserrat: ["Montserrat", "sans-serif"],
+      oswald: ["Oswald", "sans-serif"],
     },
     colors: {
       lime: "#A5D837",

@@ -21,7 +21,7 @@ const Hero = () => {
             variants={textVariants}
             className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center"
           >
-            <h1 className="text-white mb-[10px] text-[50px] font-bold font-playfair">
+            <h1 className="text-white mb-[10px] text-[50px] font-bold font-montserrat">
               Cultivating Growth, Harvesting Opportunities
             </h1>
             <p className="text-gray font-light font-lato px-[20%] text-center">
