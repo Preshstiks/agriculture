@@ -26,11 +26,13 @@ const Navbar = () => {
         <div className="flex gap-5 relative font-lato text-sm font-bold">
           <div className="relative">
             <div
-              className="hover:text-orange py-7 hover:cursor-pointer select-none flex items-center"
+              className=" hover:cursor-pointer select-none flex items-center"
               onMouseEnter={() => handleDropdownRH(true)}
               onMouseLeave={() => handleDropdownRH(false)}
             >
-              <Link href="/">Home</Link>
+              <Link className="hover:text-orange py-7" href="/">
+                Home
+              </Link>
             </div>
           </div>
           <div className="relative">
@@ -60,14 +62,20 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className="hover:text-orange py-7 hover:cursor-pointer">
-            <Link href="#">Gallery</Link>
+          <div className="hover:cursor-pointer py-7">
+            <Link className="hover:text-orange py-7 " href="#">
+              Gallery
+            </Link>
           </div>
-          <div className="hover:text-orange py-7 hover:cursor-pointer">
-            <Link href="#">Testimonials</Link>
+          <div className="hover:cursor-pointer py-7">
+            <Link className="hover:text-orange py-7 " href="#">
+              Testimonials
+            </Link>
           </div>
-          <div className="hover:text-orange py-7 hover:cursor-pointer">
-            <Link href="/contact">Contact Us</Link>
+          <div className="hover:cursor-pointer py-7">
+            <Link className="hover:text-orange py-7 " href="/contact">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
