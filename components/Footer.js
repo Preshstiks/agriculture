@@ -1,9 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
-import { IoMdMailOpen } from "react-icons/io";
+import { Link as ScrollLink } from "react-scroll";
+import { useRouter } from "next/router";
 import { PiPhoneCallFill } from "react-icons/pi";
 import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
+  const router = useRouter();
+  const isHomePage = router.pathname === "/";
+  const routes = [
+    {
+      link: "testimonials",
+      text: "TESTIMONIALS",
+    },
+  ];
+  const scrollToTestimonials = () => {
+    router.push("/", undefined, { shallow: true }).then(() => {
+      setTimeout(() => {
+        const testimonialsOffset =
+          document.getElementById("testimonials").offsetTop;
+        window.scrollTo({ top: testimonialsOffset, behavior: "smooth" });
+      }, 100);
+    });
+  };
   return (
     <div className="bg-dark font-lato font-bold text-white px-[8%] py-[100px]">
       <div className="flex justify-between items-center">
@@ -30,9 +48,28 @@ const Footer = () => {
           <div className="py-3 hover:text-orange">
             <Link href="/gallery">GALLERY</Link>
           </div>
-          <div className="py-3 hover:text-orange">
-            <Link href="#">TESTIMONIALS</Link>
-          </div>
+          {routes.map((item, index) => (
+            <div className="py-3">
+              {isHomePage ? (
+                <ScrollLink
+                  className="hover:text-orange cursor-pointer"
+                  to={item.link} // Replace 'testimonials-section' with the ID of your testimonials section
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                >
+                  {item.text}
+                </ScrollLink>
+              ) : (
+                <div
+                  className="hover:text-orange cursor-pointer"
+                  onClick={scrollToTestimonials}
+                >
+                  {item.text}
+                </div>
+              )}
+            </div>
+          ))}
           <div className="py-3 hover:text-orange">
             <Link href="/contact">CONTACT US</Link>
           </div>

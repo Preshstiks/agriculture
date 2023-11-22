@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaStar } from "react-icons/fa6";
 const Testimonials = () => {
   return (
-    <div className="py-[100px] px-[8%] text-dark">
+    <div id={"testimonials"} className="py-[100px] px-[8%] text-dark">
       <div>
         <h1 className="text-[50px] text-center py-10 font-montserrat font-medium">
           Testimonials

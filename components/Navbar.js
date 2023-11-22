@@ -2,7 +2,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
+import { Link as ScrollLink } from "react-scroll";
+import { useRouter } from "next/router";
 const Navbar = () => {
+  const router = useRouter();
+  const isHomePage = router.pathname === "/";
+  const routes = [
+    {
+      link: "testimonials",
+      text: "TESTIMONIALS",
+    },
+  ];
+  const scrollToTestimonials = () => {
+    router.push("/", undefined, { shallow: true }).then(() => {
+      setTimeout(() => {
+        const testimonialsOffset =
+          document.getElementById("testimonials").offsetTop;
+        window.scrollTo({ top: testimonialsOffset, behavior: "smooth" });
+      }, 100);
+    });
+  };
   const [showDropdownRH, setShowDropdownRH] = useState(false);
   const [showDropdownRHI, setShowDropdownRHI] = useState(false);
 
@@ -67,11 +86,27 @@ const Navbar = () => {
               Gallery
             </Link>
           </div>
-          <div className="hover:cursor-pointer py-7">
-            <Link className="hover:text-orange py-7 " href="#">
-              Testimonials
-            </Link>
-          </div>
+          {routes.map((item, index) => (
+            <div className="py-7">
+              {isHomePage ? (
+                <ScrollLink
+                  className="py-7 hover:text-orange cursor-pointer"
+                  to={item.link}
+                  smooth={true}
+                  duration={500}
+                >
+                  {item.text}
+                </ScrollLink>
+              ) : (
+                <div
+                  className="hover:text-orange cursor-pointer"
+                  onClick={scrollToTestimonials}
+                >
+                  {item.text}
+                </div>
+              )}
+            </div>
+          ))}
           <div className="hover:cursor-pointer py-7">
             <Link className="hover:text-orange py-7 " href="/contact">
               Contact Us
