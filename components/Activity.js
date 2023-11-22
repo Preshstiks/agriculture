@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 const Activity = () => {
   return (
-    <div className="text-center">
+    <div className="text-center" id={"what-we-do"}>
       <div className="bg-green py-[150px] text-white">
         <div>
           <h1 className="font-black text-[55px] tracking-wide font-montserrat">
@@ -17,9 +19,14 @@ const Activity = () => {
             stakeholders.
           </p>
         </div>
-        <button className="py-4 px-6 mt-[60px] items-start bg-orange text-white font-montserrat text-sm font-medium hover:bg-opacity-70 rounded-md">
-          SEE OUR WORKS
-        </button>
+        <div className="mt-[60px]">
+          <Link
+            href="/gallery"
+            className="py-4 px-6 mt-[60px] items-start bg-orange text-white font-montserrat text-sm font-medium hover:bg-opacity-70 rounded-md"
+          >
+            SEE OUR WORKS
+          </Link>
+        </div>
       </div>
     </div>
   );

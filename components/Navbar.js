@@ -22,14 +22,10 @@ const Navbar = () => {
       }, 100);
     });
   };
-  const [showDropdownRH, setShowDropdownRH] = useState(false);
-  const [showDropdownRHI, setShowDropdownRHI] = useState(false);
+  const [showServices, setShowServices] = useState(false);
 
-  const handleDropdownRH = (value) => {
-    setShowDropdownRH(value);
-  };
-  const handleDropdownRHI = (value) => {
-    setShowDropdownRHI(value);
+  const handleShowServices = (value) => {
+    setShowServices(value);
   };
   return (
     <div className="bg-white bg-opacity-90 z-50 w-full uppercase fixed top-0 text-dark shadow-sm px-[8%]">
@@ -44,11 +40,7 @@ const Navbar = () => {
         </Link>
         <div className="flex gap-5 relative font-lato text-sm font-bold">
           <div className="relative">
-            <div
-              className=" hover:cursor-pointer select-none flex items-center"
-              onMouseEnter={() => handleDropdownRH(true)}
-              onMouseLeave={() => handleDropdownRH(false)}
-            >
+            <div className=" hover:cursor-pointer select-none flex items-center">
               <Link className="hover:text-orange py-7" href="/">
                 Home
               </Link>
@@ -57,26 +49,35 @@ const Navbar = () => {
           <div className="relative">
             <div
               className="hover:text-orange hover:cursor-pointer flex items-center py-7"
-              onMouseEnter={() => handleDropdownRHI(true)}
-              onMouseLeave={() => handleDropdownRHI(false)}
+              onMouseEnter={() => handleShowServices(true)}
+              onMouseLeave={() => handleShowServices(false)}
             >
               Services
               <IoMdArrowDropdown className="text-dark text-[20px]" />
             </div>
-            {showDropdownRHI && (
+            {showServices && (
               <div
-                className="absolute top-[80px] bg-white w-[180px] px-2 shadow-md py-3"
-                onMouseEnter={() => handleDropdownRHI(true)}
-                onMouseLeave={() => handleDropdownRHI(false)}
+                className="absolute top-[77px] bg-white w-[180px] px-2 shadow-md py-3"
+                onMouseEnter={() => handleShowServices(true)}
+                onMouseLeave={() => handleShowServices(false)}
               >
-                <div className="py-3 hover:text-orange px-6">
-                  <Link href="#">Agribusiness</Link>
+                <div
+                  onClick={() => handleShowServices(false)}
+                  className="py-3 hover:text-orange px-6"
+                >
+                  <Link href="/services/agribusiness">Agribusiness</Link>
                 </div>
-                <div className="py-3 hover:text-orange px-6 border-t border-gray">
-                  <Link href="#">Agrotourism</Link>
+                <div
+                  onClick={() => handleShowServices(false)}
+                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                >
+                  <Link href="/services/agrotourism">Agrotourism</Link>
                 </div>
-                <div className="py-3 hover:text-orange px-6 border-t border-gray">
-                  <Link href="#">Trade Industry</Link>
+                <div
+                  onClick={() => handleShowServices(false)}
+                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                >
+                  <Link href="/services/trade-industry">Trade Industry</Link>
                 </div>
               </div>
             )}
