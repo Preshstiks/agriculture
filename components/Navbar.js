@@ -63,7 +63,7 @@ const Navbar = () => {
             )}
           </div>
           <div className="hover:cursor-pointer py-7">
-            <Link className="hover:text-orange py-7 " href="#">
+            <Link className="hover:text-orange py-7 " href="/gallery">
               Gallery
             </Link>
           </div>

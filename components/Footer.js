@@ -28,13 +28,13 @@ const Footer = () => {
             <Link href="/">HOME</Link>
           </div>
           <div className="py-3 hover:text-orange">
-            <Link href="#">GALLERY</Link>
+            <Link href="/gallery">GALLERY</Link>
           </div>
           <div className="py-3 hover:text-orange">
             <Link href="#">TESTIMONIALS</Link>
           </div>
           <div className="py-3 hover:text-orange">
-            <Link href="#">CONTACT US</Link>
+            <Link href="/contact">CONTACT US</Link>
           </div>
         </div>
         <div className="font-lato text-md font-light">
