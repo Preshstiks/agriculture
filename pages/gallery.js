@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 const Gallery = () => {
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -11,6 +10,7 @@ const Gallery = () => {
 
     return () => clearTimeout(timer);
   }, []);
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const gallery = [
     {
       img: "/group-1.png",
@@ -53,8 +53,15 @@ const Gallery = () => {
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
   ];
+  const openFullScreen = (index) => {
+    setSelectedIndex(index);
+  };
+
+  const closeFullScreen = () => {
+    setSelectedIndex(null);
+  };
   return (
-    <div className="py-[150px] px-[8%] font-lato">
+    <div className="py-[150px] px-[8%] font-lato relative">
       <div className="text-center">
         <h1 className="font-black text-dark text-[50px]">Gallery</h1>
         <div className="h-[5px] w-[100px] rounded-full bg-lime mx-auto mt-[20px] mb-[30px]"></div>
@@ -84,7 +91,8 @@ const Gallery = () => {
           {gallery.map((item, index) => (
             <motion.div
               key={index}
-              className="h-64 box relative my-4"
+              className="h-64 box relative mb-5"
+              onClick={() => openFullScreen(index)}
               whileHover={{
                 scale: 1.05,
                 transition: { duration: 0.5 },
@@ -100,23 +108,36 @@ const Gallery = () => {
                 className="text-container absolute inset-0 flex flex-col justify-end bg-black bg-opacity-0 p-3"
                 initial={{ opacity: 0, y: 20 }}
                 whileHover={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-                style={{ zIndex: 2 }}
+                style={{ zIndex: 2 }} // Adjust the z-index here
               >
                 <h1 className="text-white font-bold text-[20px]">
                   {item.head}
                 </h1>
                 <p className="text-white text-sm">{item.text}</p>
               </motion.div>
+              {/* Overlay effect */}
               <motion.div
                 className="absolute inset-0 bg-black bg-opacity-0"
                 whileHover={{
                   backgroundColor: "rgba(0, 0, 0, 0.5)",
                   transition: { duration: 0.8 },
                 }}
-                style={{ zIndex: 1 }}
+                style={{ zIndex: 1 }} // Adjust the z-index here
               />
             </motion.div>
           ))}
+          {selectedIndex !== null && (
+            <div className="fixed top-0 left-0 z-50 w-full h-full bg-black flex justify-center items-center">
+              <div className="max-w-screen-lg w-full">
+                <img
+                  src={gallery[selectedIndex].img} // Set selected image src
+                  alt={`Full Screen ${selectedIndex} - ${gallery[selectedIndex].text}`} // Set alt text
+                  className="w-full"
+                  onClick={closeFullScreen}
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
