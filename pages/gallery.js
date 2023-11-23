@@ -91,7 +91,7 @@ const Gallery = () => {
           {gallery.map((item, index) => (
             <motion.div
               key={index}
-              className="h-64 box relative mb-5"
+              className="h-64 box relative mb-5 hover:cursor-pointer"
               onClick={() => openFullScreen(index)}
               whileHover={{
                 scale: 1.05,
