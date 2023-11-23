@@ -128,7 +128,7 @@ const Gallery = () => {
           ))}
           {selectedIndex !== null && (
             <div className="fixed top-0 left-0 z-50 w-full h-full bg-black flex justify-center items-center">
-              <div className="max-w-screen-lg w-full">
+              <div className="max-w-screen-lg w-full hover:cursor-pointer">
                 <Image
                   src={gallery[selectedIndex].img} // Set selected image src
                   alt={`Full Screen ${selectedIndex} - ${gallery[selectedIndex].text}`} // Set alt text
