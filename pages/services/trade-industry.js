@@ -23,7 +23,7 @@ const TradeIndustry = () => {
   return (
     <div>
       <section className="flex flex-col min-h-screen" style={heroStyle}>
-        <div className="h-screen flex items-center text-white px-[8%]">
+        <div className="h-screen flex items-center ssm:mt-0 mt-[70px] text-white px-[8%]">
           <AnimatePresence>
             <motion.div
               initial="hidden"

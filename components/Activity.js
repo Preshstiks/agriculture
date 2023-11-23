@@ -5,7 +5,7 @@ const Activity = () => {
     <div className="text-center" id={"what-we-do"}>
       <div className="bg-green py-[150px] text-white">
         <div>
-          <h1 className="font-black text-[55px] tracking-wide font-montserrat">
+          <h1 className="sm:font-black font-bold text-[45px] sm:text-[55px] tracking-wide font-montserrat">
             What We Do
           </h1>
         </div>

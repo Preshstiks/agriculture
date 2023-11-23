@@ -29,12 +29,15 @@ module.exports = {
       dark: "#36454F",
     },
     screens: {
+      xsm: "400px",
+      ssm: "427",
       sm: "640px",
       // => @media (min-width: 640px) { ... }
 
       md: "768px",
       // => @media (min-width: 768px) { ... }
       mmd: "953px",
+      xmd: "989px",
 
       lg: "1024px",
       // => @media (min-width: 1024px) { ... }

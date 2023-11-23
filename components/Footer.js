@@ -24,8 +24,8 @@ const Footer = () => {
   };
   return (
     <div className="bg-dark font-lato font-bold text-white px-[8%] py-[100px]">
-      <div className="flex justify-between items-center">
-        <div>
+      <div className="flex md:flex-row flex-col justify-between md:items-center">
+        <div className="md:pb-0 pb-6">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/leaf.png" width={50} height={50} />
             <div className="font-black leading-4 text-lime tracking-[5px] text-md font-montserrat">
@@ -34,14 +34,9 @@ const Footer = () => {
               <h1>INITIATIVE</h1>
             </div>
           </Link>
-          <div className="font-lato py-3">
-            <span className="text-sm font-light">
-              © 2023, Renewed Hope Initiative. All rights reserved.
-            </span>
-          </div>
         </div>
 
-        <div className="text-sm font-light font-lato">
+        <div className="text-sm font-light font-lato md:pb-0 pb-6">
           <div className="py-3 hover:text-orange">
             <Link href="/">HOME</Link>
           </div>
@@ -74,7 +69,7 @@ const Footer = () => {
             <Link href="/contact">CONTACT US</Link>
           </div>
         </div>
-        <div className="font-lato text-md font-light">
+        <div className="font-lato text-md font-light md:pb-0 pb-6">
           <div className="flex items-center gap-2 py-3">
             <PiPhoneCallFill className="text-[20px]" />
             <span>+234 8123456789</span>
@@ -84,6 +79,11 @@ const Footer = () => {
             <span>Abuja, Nigeria</span>
           </div>
         </div>
+      </div>
+      <div className="font-lato py-3 text-center">
+        <span className="text-sm font-light">
+          © 2023, Renewed Hope Initiative. All rights reserved.
+        </span>
       </div>
     </div>
   );

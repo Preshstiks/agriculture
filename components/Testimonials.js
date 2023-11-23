@@ -5,7 +5,7 @@ const Testimonials = () => {
   return (
     <div id={"testimonials"} className="py-[100px] px-[8%] text-dark">
       <div>
-        <h1 className="text-[50px] text-center py-10 font-montserrat font-medium">
+        <h1 className="xsm:text-[50px] text-[40px] text-center py-10 font-montserrat font-medium">
           Testimonials
         </h1>
       </div>
