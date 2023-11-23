@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const Body1 = () => {
   return (
-    <div className="flex items-center justify-between px-[8%] py-[100px]">
-      <div className="basis-[50%]">
+    <div className="grid mmd:grid-cols-2 grid-cols-1 px-[8%] py-[100px]">
+      <div className="mmd:basis-[50%] basis-0">
         <h1 className="text-[50px] text-dark font-medium text-center font-montserrat">
           Our Mission
         </h1>
