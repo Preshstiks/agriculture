@@ -35,7 +35,7 @@ const Agribusiness = () => {
               <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Agribusiness
               </h1>
-              <p className="text-gray font-light font-lato px-[20%] text-center">
+              <p className="text-gray font-light leading-7 font-lato px-[20%] text-center">
                 Experience the full spectrum of agriculture services geared to
                 optimize growth, from customized solutions to boost productivity
                 to environmentally friendly practices. Investigate our suite of

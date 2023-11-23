@@ -34,7 +34,7 @@ const Agrotourism = () => {
               <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Agrotourism
               </h1>
-              <p className="text-gray font-light font-lato px-[20%] text-center">
+              <p className="text-gray font-light font-lato leading-7  px-[20%] text-center">
                 Discover the essence of rural life by taking advantage of our
                 agrotourism options. Participate in hands-on activities to learn
                 about local communities' stories, cuisines, and vibrant

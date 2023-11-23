@@ -41,7 +41,7 @@ const Hero = () => {
               <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Cultivating Growth, Harvesting Opportunities
               </h1>
-              <p className="text-gray font-light font-lato px-[20%] text-center">
+              <p className="text-gray font-light font-lato leading-7 px-[20%] text-center">
                 Explore the fertile landscape of agriculture, agrotourism, and
                 trade. Join us on a journey where innovation meets tradition,
                 nurturing the fields of possibility.

@@ -34,7 +34,7 @@ const TradeIndustry = () => {
               <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Trade Industry
               </h1>
-              <p className="text-gray font-light font-lato px-[20%] text-center">
+              <p className="text-gray font-light leading-7 font-lato px-[20%] text-center">
                 Set out on a tour via our integrated global trade network,
                 boosting cross-border relationships. Our strategic alliances and
                 efficient trade solutions connect producers to varied markets
