@@ -49,7 +49,7 @@ const Footer = () => {
             <Link href="/gallery">GALLERY</Link>
           </div>
           {routes.map((item, index) => (
-            <div className="py-3">
+            <div key={index} className="py-3">
               {isHomePage ? (
                 <ScrollLink
                   className="hover:text-orange cursor-pointer"

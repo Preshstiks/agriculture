@@ -34,7 +34,7 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <div className="bg-white relative bg-opacity-90 py-3 md:py-0 z-50 w-full uppercase fixed top-0 text-dark shadow-sm px-[8%]">
+    <div className="bg-white bg-opacity-90 py-3 md:py-0 z-50 w-full uppercase fixed top-0 text-dark shadow-sm px-[8%]">
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/leaf.png" width={50} height={50} />
@@ -160,9 +160,10 @@ const Navbar = () => {
             </Link>
           </div>
           {routes.map((item, index) => (
-            <div className="py-7">
+            <div key={index} className="py-7">
               {isHomePage ? (
                 <ScrollLink
+                  key={index}
                   className="py-7 hover:text-orange cursor-pointer"
                   to={item.link}
                   smooth={true}

@@ -38,6 +38,7 @@ const Hero = () => {
             </p>
             {routes.map((item, index) => (
               <ScrollLink
+                key={index}
                 className="py-4 px-6 mt-[60px] items-start cursor-pointer bg-orange text-white font-montserrat text-sm font-medium hover:bg-opacity-70 rounded-md"
                 to={item.link}
                 smooth={true}

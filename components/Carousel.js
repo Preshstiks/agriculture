@@ -1,7 +1,6 @@
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import { HeroData } from "@/data/HeroData";
-// import imageByIndex from './imageByIndex'
 
 const EmblaCarousel = () => {
   const [emblaRef] = useEmblaCarousel([Autoplay()]);
