@@ -63,7 +63,9 @@ const Gallery = () => {
   return (
     <div className="py-[150px] px-[8%] font-lato relative">
       <div className="text-center">
-        <h1 className="font-black text-dark text-[50px]">Gallery</h1>
+        <h1 className="font-black text-dark sm:text-[50px] text-[40px]">
+          Gallery
+        </h1>
         <div className="h-[5px] w-[100px] rounded-full bg-lime mx-auto mt-[20px] mb-[30px]"></div>
       </div>
       {isLoading ? (

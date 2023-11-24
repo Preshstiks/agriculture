@@ -34,6 +34,11 @@ const Footer = () => {
               <h1>INITIATIVE</h1>
             </div>
           </Link>
+          <div className="font-lato pt-6 md:block hidden">
+            <span className="text-sm font-light">
+              © 2023, Renewed Hope Initiative. All rights reserved.
+            </span>
+          </div>
         </div>
 
         <div className="text-sm font-light font-lato md:pb-0 pb-6">
@@ -80,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="font-lato py-3 text-center">
+      <div className="font-lato md:hidden block py-3 text-center">
         <span className="text-sm font-light">
           © 2023, Renewed Hope Initiative. All rights reserved.
         </span>
