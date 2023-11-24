@@ -30,7 +30,7 @@ const Hero = () => {
   return (
     <div>
       <section className="flex flex-col min-h-screen" style={heroStyle}>
-        <div className="h-screen flex items-center text-white ssm:mt-0 mt-[70px] px-[8%]">
+        <div className="h-screen flex items-center text-white sm:my-[70px] my-[150px] px-[8%]">
           <AnimatePresence>
             <motion.div
               initial="hidden"
@@ -38,15 +38,15 @@ const Hero = () => {
               variants={textVariants}
               className="text-center z-20"
             >
-              <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
+              <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Cultivating Growth, Harvesting Opportunities
               </h1>
-              <p className="text-gray font-light font-lato leading-7 px-[20%] text-center">
+              <p className="text-gray font-light font-lato leading-7 sm:px-[20%] sm:text-center text-left">
                 Explore the fertile landscape of agriculture, agrotourism, and
                 trade. Join us on a journey where innovation meets tradition,
                 nurturing the fields of possibility.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 sm:text-center text-left">
                 {routes.map((item, index) => (
                   <ScrollLink
                     key={index}

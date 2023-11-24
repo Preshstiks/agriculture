@@ -3,13 +3,13 @@ import Link from "next/link";
 const Activity = () => {
   return (
     <div className="text-center" id={"what-we-do"}>
-      <div className="bg-green py-[150px] text-white">
+      <div className="bg-green sm:px-0 px-[8%] sm:py-[150px] py-[80px] text-white">
         <div>
-          <h1 className="sm:font-black font-bold text-[45px] sm:text-[55px] tracking-wide font-montserrat">
+          <h1 className="sm:font-black sm:text-center text-left font-bold text-[45px] sm:text-[55px] tracking-wide font-montserrat">
             What We Do
           </h1>
         </div>
-        <div className="px-[20%] font-light">
+        <div className="sm:px-[20%] px-0 sm:text-center text-left font-light">
           <p className="leading-7 font-lato">
             We nurture agricultural growth, optimize supply chains, and promote
             sustainability at Renewed Hope Initiative. We welcome exploration of
@@ -19,7 +19,7 @@ const Activity = () => {
             stakeholders.
           </p>
         </div>
-        <div className="mt-[60px]">
+        <div className="sm:mt-[60px] mt-[40px] sm:text-center text-left">
           <Link
             href="/gallery"
             className="py-4 px-6 mt-[60px] items-start bg-orange text-white font-montserrat text-sm font-medium hover:bg-opacity-70 rounded-md"

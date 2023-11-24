@@ -24,7 +24,7 @@ const Agribusiness = () => {
   return (
     <div>
       <section className="flex flex-col min-h-screen" style={heroStyle}>
-        <div className="h-screen flex items-center text-white ssm:mt-0 mt-[70px] px-[8%]">
+        <div className="h-screen flex items-center text-white sm:my-[70px] my-[150px] px-[8%]">
           <AnimatePresence>
             <motion.div
               initial="hidden"
@@ -32,10 +32,10 @@ const Agribusiness = () => {
               variants={textVariants}
               className="text-center z-20"
             >
-              <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
+              <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Agribusiness
               </h1>
-              <p className="text-gray font-light leading-7 font-lato px-[20%] text-center">
+              <p className="text-gray font-light leading-7 font-lato sm:px-[20%] sm:text-center text-left">
                 Experience the full spectrum of agriculture services geared to
                 optimize growth, from customized solutions to boost productivity
                 to environmentally friendly practices. Investigate our suite of

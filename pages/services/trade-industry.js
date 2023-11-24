@@ -23,7 +23,7 @@ const TradeIndustry = () => {
   return (
     <div>
       <section className="flex flex-col min-h-screen" style={heroStyle}>
-        <div className="h-screen flex items-center ssm:mt-0 mt-[70px] text-white px-[8%]">
+        <div className="h-screen flex items-center sm:my-[70px] my-[150px] text-white px-[8%]">
           <AnimatePresence>
             <motion.div
               initial="hidden"
@@ -31,10 +31,10 @@ const TradeIndustry = () => {
               variants={textVariants}
               className="text-center z-20"
             >
-              <h1 className="mb-[10px] text-center sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
+              <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
                 Trade Industry
               </h1>
-              <p className="text-gray font-light leading-7 font-lato px-[20%] text-center">
+              <p className="text-gray font-light leading-7 font-lato sm:px-[20%] sm:text-center text-left">
                 Set out on a tour via our integrated global trade network,
                 boosting cross-border relationships. Our strategic alliances and
                 efficient trade solutions connect producers to varied markets
