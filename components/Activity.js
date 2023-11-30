@@ -11,12 +11,16 @@ const Activity = () => {
         </div>
         <div className="sm:px-[20%] px-0 sm:text-center text-left font-light">
           <p className="leading-7 font-lato">
-            We nurture agricultural growth, optimize supply chains, and promote
-            sustainability at Renewed Hope Initiative. We welcome exploration of
-            rural life and farm-to-table experiences by embracing agrotourism.
-            Furthermore, our trading knowledge enables frictionless transactions
-            across multiple agricultural markets, assuring global success for
-            stakeholders.
+            Silade Agro Clubs Ltd is dedicated to fostering sustainable
+            agribusiness solutions in Nigeria. They aim to support urban
+            gardeners, rural farmers, and agribusinesses by providing access,
+            tools, knowledge, and support for success. Their initiatives include
+            promoting sustainable practices like organic farming and water
+            conservation, supporting outgrowers and suppliers, ensuring food
+            security, enhancing marketability of agro products, maintaining a
+            knowledge-sharing platform, conserving natural resources, expanding
+            market opportunities, and encouraging research and innovation within
+            the agro industry.
           </p>
         </div>
         <div className="sm:mt-[60px] mt-[40px] sm:text-center text-left">

@@ -39,12 +39,12 @@ const Hero = () => {
               className="text-center z-20"
             >
               <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
-                Cultivating Growth, Harvesting Opportunities
+                Welcome to Silade Agro Clubs Ltd
               </h1>
               <p className="text-gray font-light font-lato leading-7 sm:px-[20%] sm:text-center text-left">
-                Explore the fertile landscape of agriculture, agrotourism, and
-                trade. Join us on a journey where innovation meets tradition,
-                nurturing the fields of possibility.
+                A leading provider of Agribusiness solutions in Nigeria. We help
+                urban gardeners, rural farmers, and agribusinesses thrive by
+                providing access, tools, knowledge, and support for success.
               </p>
               <div className="mt-10 sm:text-center text-left">
                 {routes.map((item, index) => (

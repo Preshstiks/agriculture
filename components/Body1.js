@@ -8,11 +8,16 @@ const Body1 = () => {
           Our Mission
         </h1>
         <div className="h-[5px] w-[100px] rounded-full bg-lime mx-auto sm:block hidden mt-[20px] mb-[30px]"></div>
-        <p className="text-dark sm:text-center text-left  font-light leading-7 font-lato xmd:text-left">
-          Our mission is to revolutionize agriculture by implementing
-          cutting-edge techniques, sustainable practices, and innovative
-          technologies. From precision farming to organic cultivation, we're
-          committed to maximizing yields while preserving the environment.
+        <p className="text-dark sm:text-center text-left font-light leading-7 font-lato xmd:text-left">
+          Our mission is to positively transform the agribusiness landscape by
+          promoting the establishment and growth of agro clubs members across
+          urban areas. We aim to provide Agripreneurs and urban Farmers in homes
+          and schools with access to modern technology, training, and resources
+          that enable them to increase productivity, improve livelihoods, and
+          contribute to food security. By fostering a sense of community and
+          collaboration, we strive to create a sustainable and resilient
+          agribusiness ecosystem that benefits both farmers and the overall
+          agricultural industry.
         </p>
       </div>
       <div className="xmd:block hidden">

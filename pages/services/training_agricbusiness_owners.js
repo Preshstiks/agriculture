@@ -1,7 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-
-const Agribusiness = () => {
+const Training = () => {
   const textVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
@@ -15,16 +13,15 @@ const Agribusiness = () => {
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity as needed (0.5 is 50%)
   };
   const heroStyle = {
-    backgroundImage: "url('/agric.png')",
+    backgroundImage: "url('/trade.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
-    /* Add other background properties as needed */
   };
   return (
     <div>
       <section className="flex flex-col min-h-screen" style={heroStyle}>
-        <div className="h-screen flex items-center text-white sm:my-[70px] my-[150px] px-[8%]">
+        <div className="h-screen flex items-center sm:my-[70px] my-[150px] text-white px-[8%]">
           <AnimatePresence>
             <motion.div
               initial="hidden"
@@ -33,14 +30,15 @@ const Agribusiness = () => {
               className="text-center z-20"
             >
               <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
-                Agribusiness
+                Training of Agribusiness Owners on Ways to Generate Sustainable
+                Incomes
               </h1>
               <p className="text-gray font-light leading-7 font-lato sm:px-[20%] sm:text-center text-left">
-                Experience the full spectrum of agriculture services geared to
-                optimize growth, from customized solutions to boost productivity
-                to environmentally friendly practices. Investigate our suite of
-                services, which incorporate cutting-edge technologies to improve
-                nations' food security and environmental sustainability.
+                Our Training Programs for Agribusiness Owners focus on
+                sustainable income generation methods. We equip entrepreneurs
+                within the agricultural community with strategies and knowledge
+                vital for sustainable income generation, fostering growth and
+                stability within the sector.
               </p>
             </motion.div>
           </AnimatePresence>
@@ -51,4 +49,4 @@ const Agribusiness = () => {
   );
 };
 
-export default Agribusiness;
+export default Training;

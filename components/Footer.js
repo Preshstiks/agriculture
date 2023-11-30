@@ -23,20 +23,19 @@ const Footer = () => {
     });
   };
   return (
-    <div className="bg-dark font-lato font-bold text-white px-[8%] py-[100px]">
+    <div className="bg-dark select-none font-lato font-bold text-white px-[8%] py-[100px]">
       <div className="flex md:flex-row flex-col justify-between md:items-center">
         <div className="md:pb-0 pb-6">
           <Link href="/" className="flex items-center gap-2">
             <Image src="/leaf.png" width={50} height={50} />
-            <div className="font-black leading-4 text-lime tracking-[5px] text-md font-montserrat">
-              <h1>RENEWED</h1>
-              <h1>HOPE</h1>
-              <h1>INITIATIVE</h1>
+            <div className="font-black leading-5 text-lime text-md font-montserrat">
+              <h1 className="text-[20px]">SILADE AGRO</h1>
+              <h1 className="text-[20px]">CLUBS Ltd</h1>
             </div>
           </Link>
           <div className="font-lato pt-6 md:block hidden">
             <span className="text-sm font-light">
-              © 2023, Renewed Hope Initiative. All rights reserved.
+              © 2023, Silade Agro Clubs Ltd. All rights reserved.
             </span>
           </div>
         </div>

@@ -1,7 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-
-const Agrotourism = () => {
+const AgricTraining = () => {
   const textVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
@@ -15,10 +13,11 @@ const Agrotourism = () => {
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity as needed (0.5 is 50%)
   };
   const heroStyle = {
-    backgroundImage: "url('/agro-tou.png')",
+    backgroundImage: "url('/agric.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",
+    /* Add other background properties as needed */
   };
   return (
     <div>
@@ -32,14 +31,15 @@ const Agrotourism = () => {
               className="text-center z-20"
             >
               <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
-                Agrotourism
+                Agricultural Training and Consultancy
               </h1>
-              <p className="text-gray font-light font-lato leading-7 sm:px-[20%] sm:text-center text-left">
-                Discover the essence of rural life by taking advantage of our
-                agrotourism options. Participate in hands-on activities to learn
-                about local communities' stories, cuisines, and vibrant
-                traditions. Immerse yourself in guided tours and seminars that
-                expose our regions' agricultural lifeblood.
+              <p className="text-gray font-light leading-7 font-lato sm:px-[20%] sm:text-center text-left">
+                Our Agricultural Training and Consultancy services are tailored
+                to assist both small-scale farmers and large agribusinesses in
+                navigating the complexities of farming. We offer personalized
+                support, expert guidance, and comprehensive training to optimize
+                agricultural practices and decision-making for growth and
+                profitability.
               </p>
             </motion.div>
           </AnimatePresence>
@@ -50,4 +50,4 @@ const Agrotourism = () => {
   );
 };
 
-export default Agrotourism;
+export default AgricTraining;

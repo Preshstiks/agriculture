@@ -34,17 +34,16 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <div className="bg-white bg-opacity-90 py-5 md:py-0 select-none z-50 w-full uppercase fixed top-0 text-dark shadow-sm px-[8%]">
+    <div className="bg-white bg-opacity-90 py-5 md:py-0 select-none z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
       <div className="flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/leaf.png" width={50} height={50} />
-          <div className="font-black leading-4 text-lime tracking-[5px] text-md font-montserrat">
-            <h1>RENEWED</h1>
-            <h1>HOPE</h1>
-            <h1>INITIATIVE</h1>
+          <div className="font-black leading-5 text-lime text-md font-montserrat">
+            <h1 className="text-[20px]">SILADE AGRO</h1>
+            <h1 className="text-[20px]">CLUBS Ltd</h1>
           </div>
         </Link>
-        <div className="md:hidden block">
+        <div className="md:hidden block uppercase">
           {showMenu ? (
             <FaPlus
               className="text-[25px] transform rotate-[45deg] text-green"
@@ -78,7 +77,7 @@ const Navbar = () => {
                 </div>
                 {showServices && (
                   <div
-                    className="px-2 py-3"
+                    className="px-2 py-3 uppercase"
                     onMouseEnter={() => handleShowServices(true)}
                     onMouseLeave={() => handleShowServices(false)}
                   >
@@ -86,20 +85,40 @@ const Navbar = () => {
                       onClick={() => handleShowMenu(false)}
                       className="py-3 hover:text-orange px-6"
                     >
-                      <Link href="/services/agribusiness">Agribusiness</Link>
+                      <Link href="/services/agric_training_&_consultancy">
+                        Agricultural Training and Consultancy
+                      </Link>
                     </div>
                     <div
                       onClick={() => handleShowMenu(false)}
                       className="py-3 hover:text-orange px-6 border-t border-gray"
                     >
-                      <Link href="/services/agrotourism">Agrotourism</Link>
+                      <Link href="/services/farm_mgt">Farm Management</Link>
                     </div>
                     <div
                       onClick={() => handleShowMenu(false)}
                       className="py-3 hover:text-orange px-6 border-t border-gray"
                     >
-                      <Link href="/services/trade-industry">
-                        Trade Industry
+                      <Link href="/services/training_agricbusiness_owners">
+                        Training of Agribusiness Owners on Ways to Generate
+                        Sustainable Incomes
+                      </Link>
+                    </div>
+                    <div
+                      onClick={() => handleShowMenu(false)}
+                      className="py-3 hover:text-orange px-6 border-t border-gray"
+                    >
+                      <Link href="/services/inputs_supply">Inputs Supply</Link>
+                    </div>
+                    <div
+                      onClick={() => handleShowMenu(false)}
+                      className="py-3 hover:text-orange px-6 border-t border-gray"
+                    >
+                      <Link
+                        href="/services/market_linkage
+                      "
+                      >
+                        Market Linkage
                       </Link>
                     </div>
                   </div>
@@ -150,8 +169,7 @@ const Navbar = () => {
             </div>
           )}
         </div>
-
-        <div className="md:gap-5 relative font-lato text-sm font-bold md:flex hidden">
+        <div className="md:gap-5 relative uppercase font-lato text-sm font-bold md:flex hidden">
           <div className="relative">
             <div className=" hover:cursor-pointer select-none flex items-center">
               <Link className="hover:text-orange py-9" href="/">
@@ -170,7 +188,7 @@ const Navbar = () => {
             </div>
             {showServices && (
               <div
-                className="absolute top-[92.5px] bg-white w-[180px] px-2 shadow-md py-3"
+                className="absolute top-[92.5px] bg-white w-[300px] px-2 shadow-md py-3"
                 onMouseEnter={() => handleShowServices(true)}
                 onMouseLeave={() => handleShowServices(false)}
               >
@@ -178,19 +196,36 @@ const Navbar = () => {
                   onClick={() => handleShowServices(false)}
                   className="py-3 hover:text-orange px-6"
                 >
-                  <Link href="/services/agribusiness">Agribusiness</Link>
+                  <Link href="/services/agric_training_&_consultancy">
+                    Agricultural Training and Consultancy
+                  </Link>
                 </div>
                 <div
                   onClick={() => handleShowServices(false)}
                   className="py-3 hover:text-orange px-6 border-t border-gray"
                 >
-                  <Link href="/services/agrotourism">Agrotourism</Link>
+                  <Link href="/services/farm_mgt">Farm Management</Link>
                 </div>
                 <div
                   onClick={() => handleShowServices(false)}
                   className="py-3 hover:text-orange px-6 border-t border-gray"
                 >
-                  <Link href="/services/trade-industry">Trade Industry</Link>
+                  <Link href="/services/training_agricbusiness_owners">
+                    Training of Agribusiness Owners on Ways to Generate
+                    Sustainable Incomes
+                  </Link>
+                </div>
+                <div
+                  onClick={() => handleShowServices(false)}
+                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                >
+                  <Link href="/services/inputs_supply">Inputs Supply</Link>
+                </div>
+                <div
+                  onClick={() => handleShowServices(false)}
+                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                >
+                  <Link href="/services/market_linkage">Market Linkage</Link>
                 </div>
               </div>
             )}
