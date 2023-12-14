@@ -12,7 +12,7 @@ const Navbar = () => {
   const routes = [
     {
       link: "whychooseus",
-      text: "WHYCHOOSEUS",
+      text: "WHY CHOOSE US",
     },
   ];
   const scrollToWhyChooseUs = () => {
