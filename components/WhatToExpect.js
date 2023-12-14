@@ -5,8 +5,8 @@ const WhatToExpect = () => {
         What To Expect
       </h1>
       <div className="h-[5px] w-[100px] rounded-full bg-lime mx-auto sm:block hidden mt-[20px] mb-[30px]"></div>
-      <div className="flex flex-wrap justify-center">
-        <div className="minixl:max-w-xs xmd:max-w-sm max-w-md rounded overflow-hidden shadow-lg m-4">
+      <div className="flex fminixl:justify-start justify-center flex-wrap">
+        <div className="minixl:max-w-xs xmd:max-w-sm w-full rounded overflow-hidden shadow-lg m-4">
           <div className="p-8">
             <div className="font-bold text-[25px] font-montserrat mb-2 text-dark">
               Membership Benefits
@@ -19,7 +19,7 @@ const WhatToExpect = () => {
             </p>
           </div>
         </div>
-        <div className="minixl:max-w-xs xmd:max-w-sm max-w-md rounded overflow-hidden shadow-lg m-4">
+        <div className="minixl:max-w-xs xmd:max-w-sm w-full rounded overflow-hidden shadow-lg m-4">
           <div className="p-8">
             <div className="font-bold text-[25px] font-montserrat mb-2 text-dark">
               Resourceful Hub
@@ -32,7 +32,7 @@ const WhatToExpect = () => {
             </p>
           </div>
         </div>
-        <div className="minixl:max-w-xs xmd:max-w-sm max-w-md rounded overflow-hidden shadow-lg m-4">
+        <div className="minixl:max-w-xs xmd:max-w-sm w-full rounded overflow-hidden shadow-lg m-4">
           <div className="p-8">
             <div className="font-bold text-[25px] font-montserrat mb-2 text-dark">
               Collaborative Connections
@@ -45,7 +45,7 @@ const WhatToExpect = () => {
             </p>
           </div>
         </div>
-        <div className="minixl:max-w-[40rem] xmd:max-w-sm max-w-md rounded overflow-hidden shadow-lg m-4">
+        <div className="minixl:max-w-[40rem] xmd:max-w-sm w-full rounded overflow-hidden shadow-lg m-4">
           <div className="p-8">
             <div className="font-bold text-[25px] font-montserrat mb-2 text-dark">
               Empowerment

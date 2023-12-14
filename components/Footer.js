@@ -9,16 +9,16 @@ const Footer = () => {
   const isHomePage = router.pathname === "/";
   const routes = [
     {
-      link: "testimonials",
-      text: "TESTIMONIALS",
+      link: "whychooseus",
+      text: "WHYCHOOSEUS",
     },
   ];
-  const scrollToTestimonials = () => {
+  const scrollToWhyChooseUs = () => {
     router.push("/", undefined, { shallow: true }).then(() => {
       setTimeout(() => {
-        const testimonialsOffset =
-          document.getElementById("testimonials").offsetTop;
-        window.scrollTo({ top: testimonialsOffset, behavior: "smooth" });
+        const whyChooseUsOffset =
+          document.getElementById("whychooseus").offsetTop;
+        window.scrollTo({ top: whyChooseUsOffset, behavior: "smooth" });
       }, 100);
     });
   };
@@ -27,11 +27,7 @@ const Footer = () => {
       <div className="flex md:flex-row flex-col justify-between md:items-center">
         <div className="md:pb-0 pb-6">
           <Link href="/" className="flex items-center gap-2">
-            <Image src="/leaf.png" width={50} height={50} />
-            <div className="font-black leading-5 text-lime text-md font-montserrat">
-              <h1 className="text-[20px]">SILADE AGRO</h1>
-              <h1 className="text-[20px]">CLUBS Ltd</h1>
-            </div>
+            <Image src="/logo.png" width={100} height={100} />
           </Link>
           <div className="font-lato pt-6 md:block hidden">
             <span className="text-sm font-light">
@@ -52,7 +48,7 @@ const Footer = () => {
               {isHomePage ? (
                 <ScrollLink
                   className="hover:text-orange cursor-pointer"
-                  to={item.link} // Replace 'testimonials-section' with the ID of your testimonials section
+                  to={item.link}
                   spy={true}
                   smooth={true}
                   duration={500}
@@ -62,7 +58,7 @@ const Footer = () => {
               ) : (
                 <div
                   className="hover:text-orange cursor-pointer"
-                  onClick={scrollToTestimonials}
+                  onClick={scrollToWhyChooseUs}
                 >
                   {item.text}
                 </div>

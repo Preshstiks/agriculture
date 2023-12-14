@@ -11,16 +11,16 @@ const Navbar = () => {
   const isHomePage = router.pathname === "/";
   const routes = [
     {
-      link: "testimonials",
-      text: "TESTIMONIALS",
+      link: "whychooseus",
+      text: "WHYCHOOSEUS",
     },
   ];
-  const scrollToTestimonials = () => {
+  const scrollToWhyChooseUs = () => {
     router.push("/", undefined, { shallow: true }).then(() => {
       setTimeout(() => {
-        const testimonialsOffset =
-          document.getElementById("testimonials").offsetTop;
-        window.scrollTo({ top: testimonialsOffset, behavior: "smooth" });
+        const whyChooseUsOffset =
+          document.getElementById("whychooseus").offsetTop;
+        window.scrollTo({ top: whyChooseUsOffset, behavior: "smooth" });
       }, 100);
     });
   };
@@ -34,14 +34,10 @@ const Navbar = () => {
     setShowMenu(!showMenu);
   };
   return (
-    <div className="bg-white bg-opacity-90 py-5 md:py-0 select-none z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
-      <div className="flex justify-between items-center">
+    <div className="bg-white bg-opacity-90 md:py-0 select-none z-50 w-full fixed top-0 text-dark shadow-sm px-[8%]">
+      <div className="flex justify-between py-2 items-center">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/leaf.png" width={50} height={50} />
-          <div className="font-black leading-5 text-lime text-md font-montserrat">
-            <h1 className="text-[20px]">SILADE AGRO</h1>
-            <h1 className="text-[20px]">CLUBS Ltd</h1>
-          </div>
+          <Image src="/logo.png" width={100} height={100} />
         </Link>
         <div className="md:hidden block uppercase">
           {showMenu ? (
@@ -151,7 +147,7 @@ const Navbar = () => {
                   ) : (
                     <div
                       className="hover:text-orange cursor-pointer"
-                      onClick={scrollToTestimonials}
+                      onClick={scrollToWhyChooseUs}
                     >
                       {item.text}
                     </div>
@@ -170,16 +166,15 @@ const Navbar = () => {
           )}
         </div>
         <div className="md:gap-5 relative uppercase font-lato text-sm font-bold md:flex hidden">
-          <div className="relative">
-            <div className=" hover:cursor-pointer select-none flex items-center">
-              <Link className="hover:text-orange py-9" href="/">
-                Home
-              </Link>
-            </div>
-          </div>
+          <Link
+            className="hover:text-orange py-2 relative hover:cursor-pointer select-none"
+            href="/"
+          >
+            Home
+          </Link>
           <div className="relative">
             <div
-              className="hover:text-orange hover:cursor-pointer flex items-center py-9"
+              className="hover:text-orange py-2 hover:cursor-pointer flex items-center"
               onMouseEnter={() => handleShowServices(true)}
               onMouseLeave={() => handleShowServices(false)}
             >
@@ -188,7 +183,7 @@ const Navbar = () => {
             </div>
             {showServices && (
               <div
-                className="absolute top-[92.5px] bg-white w-[300px] px-2 shadow-md py-3"
+                className="absolute top-[34px] bg-white w-[300px] px-2 shadow-md py-3"
                 onMouseEnter={() => handleShowServices(true)}
                 onMouseLeave={() => handleShowServices(false)}
               >
@@ -230,17 +225,17 @@ const Navbar = () => {
               </div>
             )}
           </div>
-          <div className="hover:cursor-pointer py-9">
-            <Link className="hover:text-orange py-9 " href="/gallery">
+          <div className="hover:cursor-pointer py-2">
+            <Link className="py-2 hover:text-orange" href="/gallery">
               Gallery
             </Link>
           </div>
           {routes.map((item, index) => (
-            <div key={index} className="py-9">
+            <div key={index} className="py-2">
               {isHomePage ? (
                 <ScrollLink
                   key={index}
-                  className="py-9 hover:text-orange cursor-pointer"
+                  className=" hover:text-orange cursor-pointer"
                   to={item.link}
                   smooth={true}
                   duration={500}
@@ -250,15 +245,15 @@ const Navbar = () => {
               ) : (
                 <div
                   className="hover:text-orange cursor-pointer"
-                  onClick={scrollToTestimonials}
+                  onClick={scrollToWhyChooseUs}
                 >
                   {item.text}
                 </div>
               )}
             </div>
           ))}
-          <div className="hover:cursor-pointer py-9">
-            <Link className="hover:text-orange py-9" href="/contact">
+          <div className="py-2 hover:cursor-pointer">
+            <Link className="py-2 hover:text-orange" href="/contact">
               Contact Us
             </Link>
           </div>

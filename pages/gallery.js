@@ -42,16 +42,6 @@ const Gallery = () => {
       head: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     },
-    {
-      img: "/group-7.png",
-      head: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      img: "/group-8.png",
-      head: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
   ];
   const openFullScreen = (index) => {
     setSelectedIndex(index);
@@ -110,21 +100,20 @@ const Gallery = () => {
                 className="text-container absolute inset-0 flex flex-col justify-end bg-black bg-opacity-0 p-3"
                 initial={{ opacity: 0, y: 20 }}
                 whileHover={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
-                style={{ zIndex: 2 }} // Adjust the z-index here
+                style={{ zIndex: 2 }}
               >
                 <h1 className="text-white font-bold text-[20px]">
                   {item.head}
                 </h1>
                 <p className="text-white text-sm">{item.text}</p>
               </motion.div>
-              {/* Overlay effect */}
               <motion.div
                 className="absolute inset-0 bg-black bg-opacity-0"
                 whileHover={{
                   backgroundColor: "rgba(0, 0, 0, 0.5)",
                   transition: { duration: 0.8 },
                 }}
-                style={{ zIndex: 1 }} // Adjust the z-index here
+                style={{ zIndex: 1 }}
               />
             </motion.div>
           ))}
