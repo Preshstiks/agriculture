@@ -13,7 +13,7 @@ const MarketLinkage = () => {
     backgroundColor: "rgba(0, 0, 0, 0.5)", // Adjust opacity as needed (0.5 is 50%)
   };
   const heroStyle = {
-    backgroundImage: "url('/agro-tou.png')",
+    backgroundImage: "url('/market.png')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     position: "relative",

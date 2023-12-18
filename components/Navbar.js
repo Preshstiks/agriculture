@@ -117,6 +117,17 @@ const Navbar = () => {
                         Market Linkage
                       </Link>
                     </div>
+                    <div
+                      onClick={() => handleShowMenu(false)}
+                      className="py-3 hover:text-orange px-6 border-t border-gray"
+                    >
+                      <Link
+                        href="/services/agritourism
+                      "
+                      >
+                        AgriTourism
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
@@ -221,6 +232,12 @@ const Navbar = () => {
                   className="py-3 hover:text-orange px-6 border-t border-gray"
                 >
                   <Link href="/services/market_linkage">Market Linkage</Link>
+                </div>
+                <div
+                  onClick={() => handleShowServices(false)}
+                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                >
+                  <Link href="/services/agritourism">AgriTourism</Link>
                 </div>
               </div>
             )}
