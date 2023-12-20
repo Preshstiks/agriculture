@@ -30,7 +30,7 @@ const AgriTourism = () => {
               className="text-center z-20"
             >
               <h1 className="mb-[10px] sm:text-center text-left sm:text-[40px] text-[35px] md:text-[50px] font-bold font-montserrat">
-                AgriTourism
+                Agri-Tourism
               </h1>
               <p className="text-gray font-light font-lato leading-7 sm:px-[20%] sm:text-center text-left">
                 Silade Agro Clubs Ltd integrates agriculture and tourism,

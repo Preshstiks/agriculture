@@ -14,15 +14,15 @@ const WhyChooseUs = () => {
         {WhyChooseUsData.map((items) => (
           <div
             key={items.id}
-            className="bg-[#C0C0C0] p-[30px] md:w-[21rem] w-full rounded-md"
+            className="bg-green p-[30px] md:w-[21rem] w-full rounded-md"
           >
-            <div className="flex text-[#E5E4E2] justify-end text-[52px] font-black font-lato">
+            <div className="flex text-[#538c5e] justify-end text-[52px] font-black font-lato">
               {items.serialno}
             </div>
-            <div className="font-black text-dark text-[25px]">
+            <div className="font-black text-white text-[25px]">
               {items.heading}
             </div>
-            <div className="font-light text-dark leading-7 text-[15px]">
+            <div className="font-light text-white leading-7 text-[15px]">
               {items.content}
             </div>
           </div>

@@ -1,21 +1,71 @@
 import emailjs from "@emailjs/browser";
+import { useRouter } from "next/navigation";
 import { useRef, useState } from "react";
+import { PuffLoader } from "react-spinners";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const form = useRef();
   const [nameData, setNameData] = useState("");
   const [emailData, setEmailData] = useState("");
   const [messageData, setMessageData] = useState("");
   const [submit, setSubmit] = useState(false);
-  const sendEmail = (e) => {
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
+  // const sendEmail = (e) => {
+  //   e.preventDefault();
+  //   if (emailData !== "" && nameData !== "" && messageData !== "") {
+  //     emailjs.sendForm(
+  //       "service_d6m4sou",
+  //       "template_ykikmnc",
+  //       form.current,
+  //       "EUriGF9xODVrqT71I"
+  //     );
+  //     setSubmit(true);
+  //   }
+  // };
+  const sendEmail = async (e) => {
     e.preventDefault();
     if (emailData !== "" && nameData !== "" && messageData !== "") {
-      emailjs.sendForm(
-        "service_d6m4sou",
-        "template_ykikmnc",
-        form.current,
-        "EUriGF9xODVrqT71I"
-      );
-      setSubmit(true);
+      setIsLoading(true);
+      try {
+        const res = await emailjs.sendForm(
+          "service_d6m4sou",
+          "template_ykikmnc",
+          form.current,
+          "EUriGF9xODVrqT71I"
+        );
+        if (res.status === 200) {
+          setSubmit(true);
+          setTimeout(() => {
+            router.push("/");
+          }, 3000);
+        }
+      } catch (error) {
+        toast.error("Email cannot be sent!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+      } finally {
+        setIsLoading(false);
+      }
+    } else {
+      toast.warn("Please fill all inputs!", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
     }
   };
   if (submit) {
@@ -30,7 +80,7 @@ const Contact = () => {
   return (
     <div className="px-[8%] py-[120px]">
       <div className="py-[50px]">
-        <h1 className="font-montserrat font-black sm:text-[50px] text-[30px]">
+        <h1 className="font-montserrat font-black text-green sm:text-[50px] text-[30px]">
           CONTACT US
         </h1>
       </div>
@@ -91,13 +141,26 @@ const Contact = () => {
           <div className="flex justify-between mt-[13px] w-full">
             <button
               type="submit"
-              className="md:py-3 py-2 px-6 text-white font-bold w-full bg-[#0A0A22] rounded-md"
+              className="md:py-3 py-2 px-6 text-white font-bold w-full bg-green rounded-md"
             >
-              Submit
+              {isLoading ? (
+                <div className="flex items-center h-full justify-center">
+                  <PuffLoader
+                    color="#ffffff"
+                    loading={isLoading ? true : false}
+                    size={25}
+                    aria-label="Loading Spinner"
+                    data-testid="loader"
+                  />
+                </div>
+              ) : (
+                "Submit"
+              )}
             </button>
           </div>
         </div>
       </form>
+      <ToastContainer />
     </div>
   );
 };

@@ -53,11 +53,12 @@ const Navbar = () => {
           )}
           {showMenu && (
             <div className="bg-gray w-full top-[97px] left-0 right-0 font-lato absolute h-auto px-6 py-8 md:relative">
-              <div
-                className="py-4 font-bold"
-                onClick={() => handleShowMenu(false)}
-              >
-                <Link className="hover:text-orange" href="/">
+              <div className="w-full">
+                <Link
+                  className="py-4 font-bold hover:text-orange inline-block w-full"
+                  onClick={() => handleShowMenu(false)}
+                  href="/"
+                >
                   Home
                 </Link>
               </div>
@@ -77,79 +78,82 @@ const Navbar = () => {
                     onMouseEnter={() => handleShowServices(true)}
                     onMouseLeave={() => handleShowServices(false)}
                   >
-                    <div
-                      onClick={() => handleShowMenu(false)}
-                      className="py-3 hover:text-orange px-6"
-                    >
-                      <Link href="/services/agric_training_&_consultancy">
+                    <div className="w-full">
+                      <Link
+                        onClick={() => handleShowMenu(false)}
+                        className="py-3 hover:text-orange px-6 w-full inline-block"
+                        href="/services/agric_training_&_consultancy"
+                      >
                         Agricultural Training and Consultancy
+                      </Link>
+                    </div>
+                    <div className="w-full">
+                      <Link
+                        onClick={() => handleShowMenu(false)}
+                        className="py-3 hover:text-orange px-6 border-t border-gray w-full inline-block"
+                        href="/services/farm_mgt"
+                      >
+                        Farm Management
                       </Link>
                     </div>
                     <div
                       onClick={() => handleShowMenu(false)}
-                      className="py-3 hover:text-orange px-6 border-t border-gray"
-                    >
-                      <Link href="/services/farm_mgt">Farm Management</Link>
-                    </div>
-                    <div
-                      onClick={() => handleShowMenu(false)}
-                      className="py-3 hover:text-orange px-6 border-t border-gray"
+                      className="py-3 hover:text-orange px-6 border-t border-gray w-full inline-block"
                     >
                       <Link href="/services/training_agricbusiness_owners">
                         Training of Agribusiness Owners on Ways to Generate
                         Sustainable Incomes
                       </Link>
                     </div>
-                    <div
-                      onClick={() => handleShowMenu(false)}
-                      className="py-3 hover:text-orange px-6 border-t border-gray"
-                    >
-                      <Link href="/services/inputs_supply">Inputs Supply</Link>
+                    <div className="w-full">
+                      <Link
+                        href="/services/inputs_supply"
+                        onClick={() => handleShowMenu(false)}
+                        className="py-3 hover:text-orange px-6 border-t border-gray w-full inline-block"
+                      >
+                        Inputs Supply
+                      </Link>
                     </div>
-                    <div
-                      onClick={() => handleShowMenu(false)}
-                      className="py-3 hover:text-orange px-6 border-t border-gray"
-                    >
+                    <div className="w-full">
                       <Link
                         href="/services/market_linkage
                       "
+                        onClick={() => handleShowMenu(false)}
+                        className="py-3 hover:text-orange px-6 border-t border-gray w-full inline-block"
                       >
                         Market Linkage
                       </Link>
                     </div>
-                    <div
-                      onClick={() => handleShowMenu(false)}
-                      className="py-3 hover:text-orange px-6 border-t border-gray"
-                    >
+                    <div className="w-full">
                       <Link
                         href="/services/agritourism
                       "
+                        onClick={() => handleShowMenu(false)}
+                        className="py-3 hover:text-orange px-6 border-t border-gray w-full inline-block"
                       >
-                        AgriTourism
+                        Agri-Tourism
                       </Link>
                     </div>
                   </div>
                 )}
               </div>
-              <div
-                onClick={() => handleShowMenu(false)}
-                className="py-4 font-bold"
-              >
-                <Link className="hover:text-orange" href="/gallery">
+              <div className="w-full">
+                <Link
+                  href="/gallery"
+                  onClick={() => handleShowMenu(false)}
+                  className="py-4 font-bold w-full inline-block hover:text-orange"
+                >
                   Gallery
                 </Link>
               </div>
               {routes.map((item, index) => (
-                <div
-                  key={index}
-                  className="py-4 font-bold"
-                  onClick={() => handleShowMenu(false)}
-                >
+                <div key={index} className="w-full">
                   {isHomePage ? (
                     <ScrollLink
                       key={index}
-                      className="py-4 hover:text-orange cursor-pointer"
+                      className="py-4 hover:text-orange cursor-pointer w-full inline-block font-bold"
                       to={item.link}
+                      onClick={() => handleShowMenu(false)}
                       smooth={true}
                       duration={500}
                     >
@@ -157,7 +161,7 @@ const Navbar = () => {
                     </ScrollLink>
                   ) : (
                     <div
-                      className="hover:text-orange cursor-pointer"
+                      className="hover:text-orange py-4 cursor-pointer font-bold"
                       onClick={scrollToWhyChooseUs}
                     >
                       {item.text}
@@ -165,11 +169,12 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-              <div
-                onClick={() => handleShowMenu(false)}
-                className="py-4 font-bold"
-              >
-                <Link className="hover:text-orange" href="/contact">
+              <div className="w-full">
+                <Link
+                  className="hover:text-orange py-4 font-bold w-full inline-block"
+                  onClick={() => handleShowMenu(false)}
+                  href="/contact"
+                >
                   Contact Us
                 </Link>
               </div>
@@ -198,47 +203,49 @@ const Navbar = () => {
                 onMouseEnter={() => handleShowServices(true)}
                 onMouseLeave={() => handleShowServices(false)}
               >
-                <div
+                <Link
+                  href="/services/agric_training_&_consultancy"
                   onClick={() => handleShowServices(false)}
-                  className="py-3 hover:text-orange px-6"
+                  className="py-3 hover:text-orange px-6 w-full inline-block"
                 >
-                  <Link href="/services/agric_training_&_consultancy">
-                    Agricultural Training and Consultancy
-                  </Link>
-                </div>
-                <div
+                  Agricultural Training and Consultancy
+                </Link>
+                <Link
+                  href="/services/farm_mgt"
                   onClick={() => handleShowServices(false)}
-                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                  className="py-3 hover:text-orange px-6 border-t w-full border-gray inline-block"
                 >
-                  <Link href="/services/farm_mgt">Farm Management</Link>
-                </div>
-                <div
+                  Farm Management
+                </Link>
+                <Link
+                  href="/services/training_agricbusiness_owners"
                   onClick={() => handleShowServices(false)}
-                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                  className="py-3 hover:text-orange px-6 border-t w-full border-gray inline-block"
                 >
-                  <Link href="/services/training_agricbusiness_owners">
-                    Training of Agribusiness Owners on Ways to Generate
-                    Sustainable Incomes
-                  </Link>
-                </div>
-                <div
+                  Training of Agribusiness Owners on Ways to Generate
+                  Sustainable Incomes
+                </Link>
+                <Link
                   onClick={() => handleShowServices(false)}
-                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                  className="py-3 hover:text-orange px-6 border-t w-full border-gray inline-block"
+                  href="/services/inputs_supply"
                 >
-                  <Link href="/services/inputs_supply">Inputs Supply</Link>
-                </div>
-                <div
+                  Inputs Supply
+                </Link>
+                <Link
                   onClick={() => handleShowServices(false)}
-                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                  className="py-3 hover:text-orange px-6 border-t border-gray w-full inline-block"
+                  href="/services/market_linkage"
                 >
-                  <Link href="/services/market_linkage">Market Linkage</Link>
-                </div>
-                <div
+                  Market Linkage
+                </Link>
+                <Link
+                  href="/services/agritourism"
                   onClick={() => handleShowServices(false)}
-                  className="py-3 hover:text-orange px-6 border-t border-gray"
+                  className="py-3 hover:text-orange px-6 border-t w-full border-gray inline-block"
                 >
-                  <Link href="/services/agritourism">AgriTourism</Link>
-                </div>
+                  Agri-Tourism
+                </Link>
               </div>
             )}
           </div>
